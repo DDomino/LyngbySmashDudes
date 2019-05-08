@@ -10,16 +10,18 @@ public class MovementController : MonoBehaviour
     float horizontalMove = 0f;
     bool jump = false;
     public float runSpeed = 40f;
-
-   
-
-
     public Animator animator;
-  
 
-    // Update is called once per frame
+    int noOfClicks;
+    bool canClick;
 
-  
+
+    private void Start()
+    {
+        noOfClicks = 0;
+        canClick = true;
+    }
+
 
 
     public void SpeedBoost(float amount)
@@ -29,6 +31,9 @@ public class MovementController : MonoBehaviour
 
 void Update()
     {
+
+        if (Input.GetMouseButtonDown(0)) { ComboStarter(); }
+
      animator.SetFloat("MovementSpeed", Mathf.Abs(horizontalMove));
 
         horizontalMove = Input.GetAxisRaw("Horizontal")*runSpeed;
@@ -38,6 +43,44 @@ void Update()
          //   animator.SetBool("isJumping", true);
 
         }
+
+    }
+
+
+    void ComboStarter()
+    {
+        if (canClick)
+        {
+            noOfClicks++;
+        }
+        if (noOfClicks == 1) {
+            animator.SetInteger("noOfClicks", noOfClicks);
+           
+           
+        }
+        if (noOfClicks == 2)
+        {
+            canClick = true;
+            animator.SetInteger("noOfClicks", noOfClicks);
+            Debug.Log("Punch 2");
+        }
+        if (noOfClicks == 3)
+        {
+            
+            animator.SetInteger("noOfClicks", noOfClicks);
+            Debug.Log("Punch 3");
+            noOfClicks = 0;
+            
+        }
+
+    }
+
+
+    public void ComboCheck()
+    {
+        canClick = false;
+
+        
 
     }
 
@@ -57,7 +100,6 @@ void Update()
 
 
     
-
  
 
 
