@@ -5,6 +5,7 @@ TextureImporter:
     21300000: Goku Sprites_0
     21300002: Goku Sprites_1
     21300004: Goku Sprites_2
+    21300006: Goku Sprites_3
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -146,13 +147,33 @@ TextureImporter:
         width: 32
         height: 44
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: d820a802f396471439f71ffc3b105f65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goku Sprites_3
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 1386
+        width: 51
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 5, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c518adde5e0c68844a9e4e829c72e21c
       vertices: []
       indices: 
       edges: []

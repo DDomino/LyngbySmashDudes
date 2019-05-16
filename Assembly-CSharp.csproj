@@ -60,11 +60,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Ny mappe\scripts\GetMainChar.cs" />
-    <Compile Include="Assets\Ny mappe\scripts\PlatformHoverScript.cs" />
-    <Compile Include="Assets\Ny mappe\scripts\Selector_script.cs" />
     <Compile Include="Assets\Player\2D-Character-Controller-master\CharacterController2D.cs" />
     <Compile Include="Assets\Player\MovementController.cs" />
+    <Compile Include="Assets\scripts\bullet.cs" />
+    <Compile Include="Assets\scripts\Changeboo.cs" />
+    <Compile Include="Assets\scripts\GetMainChar.cs" />
+    <Compile Include="Assets\scripts\PlatformHoverScript.cs" />
+    <Compile Include="Assets\scripts\playerPowerUp.cs" />
+    <Compile Include="Assets\scripts\powerUp.cs" />
+    <Compile Include="Assets\scripts\Selector_script.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/unity ting ting/smashproject/LyngbySmashDudes/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

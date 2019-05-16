@@ -41,19 +41,19 @@ void Update()
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("PowerUp"))
-        {
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (collision.gameObject.CompareTag("PowerUp"))
+    //    {
 
-            animator.SetTrigger("isPowerUp");
+    //        animator.SetTrigger("isPowerUp");
            
 
-            // animator.SetBool("isPowerUp", false);
+    //        // animator.SetBool("isPowerUp", false);
 
 
-        }
-    }
+    //    }
+    //}
 
 
     
