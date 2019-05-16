@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Player\2D-Character-Controller-master\CharacterController2D.cs" />
     <Compile Include="Assets\Player\MovementController.cs" />
+    <Compile Include="Assets\scripts\breakStuff.cs" />
     <Compile Include="Assets\scripts\bullet.cs" />
     <Compile Include="Assets\scripts\Changeboo.cs" />
     <Compile Include="Assets\scripts\GetMainChar.cs" />

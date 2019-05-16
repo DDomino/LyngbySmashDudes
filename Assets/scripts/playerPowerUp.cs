@@ -54,8 +54,8 @@ public class playerPowerUp : MonoBehaviour
                 else
                 {
 
-                    var fireballInst = Instantiate(fireball, transform.position, Quaternion.Euler(new Vector2(-0.4f, 0)));
-                    fireballInst.velocity = new Vector2(-fireballSpeed, 0);
+                    var fireballInst = Instantiate(fireball, transform.position, Quaternion.Euler(new Vector3(0, 0,180)));
+                    fireballInst.velocity = new Vector2(-fireballSpeed,0);
                     Debug.Log("Fire Fire Fire");
                     powerMode = false;
                     work = 1;
