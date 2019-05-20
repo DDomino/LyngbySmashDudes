@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class MovementController : MonoBehaviour
 {
 
     public CharacterController2D controller;
-
+ 
     float horizontalMove = 0f;
     bool jump = false;
     public float runSpeed = 40f;
@@ -18,6 +20,7 @@ public class MovementController : MonoBehaviour
 
     private void Start()
     {
+        
         noOfClicks = 0;
         canClick = true;
     }
@@ -49,29 +52,45 @@ void Update()
 
     void ComboStarter()
     {
+
+        
         if (canClick)
         {
             noOfClicks++;
         }
+
         if (noOfClicks == 1) {
+            
             animator.SetInteger("noOfClicks", noOfClicks);
-           
-           
-        }
+            StartCoroutine("comboWait");
+
+         }
+
         if (noOfClicks == 2)
         {
-            canClick = true;
             animator.SetInteger("noOfClicks", noOfClicks);
-            Debug.Log("Punch 2");
         }
+
+
         if (noOfClicks == 3)
         {
-            
+         
             animator.SetInteger("noOfClicks", noOfClicks);
-            Debug.Log("Punch 3");
-            noOfClicks = 0;
             
-        }
+         }
+    
+
+    }
+
+    IEnumerator comboWait()
+    {
+
+        
+        yield return new WaitForSecondsRealtime(0.5f);
+        noOfClicks = 0;
+        animator.SetInteger("noOfClicks", 0);
+        canClick = true;
+
 
     }
 
@@ -79,8 +98,8 @@ void Update()
     public void ComboCheck()
     {
         canClick = false;
+     
 
-        
 
     }
 

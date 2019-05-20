@@ -60,6 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\AiDetection.cs" />
+    <Compile Include="Assets\AIMovement.cs" />
+    <Compile Include="Assets\AttackScript.cs" />
+    <Compile Include="Assets\Monster.cs" />
+    <Compile Include="Assets\Ny mappe\scripts\PlatformHoverScript.cs" />
+    <Compile Include="Assets\Ny mappe\scripts\Selector_script.cs" />
     <Compile Include="Assets\Player\2D-Character-Controller-master\CharacterController2D.cs" />
     <Compile Include="Assets\Player\MovementController.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
