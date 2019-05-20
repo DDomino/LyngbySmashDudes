@@ -67,7 +67,13 @@
     <Compile Include="Assets\Ny mappe\scripts\PlatformHoverScript.cs" />
     <Compile Include="Assets\Ny mappe\scripts\Selector_script.cs" />
     <Compile Include="Assets\Player\2D-Character-Controller-master\CharacterController2D.cs" />
+    <Compile Include="Assets\Player\2D-Character-Controller-master\playerPowerUp.cs" />
+    <Compile Include="Assets\Player\2D-Character-Controller-master\powerUp.cs" />
     <Compile Include="Assets\Player\MovementController.cs" />
+    <Compile Include="Assets\Prefab\scripts\breakStuff.cs" />
+    <Compile Include="Assets\Prefab\scripts\bullet.cs" />
+    <Compile Include="Assets\Prefab\scripts\Changeboo.cs" />
+    <Compile Include="Assets\Prefab\scripts\GetMainChar.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Andreas/Desktop/Semester 4/Unity/LyngSmashDudes/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
