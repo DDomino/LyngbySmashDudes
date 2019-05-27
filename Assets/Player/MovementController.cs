@@ -14,7 +14,7 @@ public class MovementController : MonoBehaviour
     public float runSpeed = 40f;
     public Animator animator;
 
-    int noOfClicks;
+    public int noOfClicks;
     bool canClick;
 
 
@@ -77,7 +77,8 @@ void Update()
          
             animator.SetInteger("noOfClicks", noOfClicks);
             
-         }
+
+        }
     
 
     }
@@ -86,7 +87,7 @@ void Update()
     {
 
         
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(0.8f);
         noOfClicks = 0;
         animator.SetInteger("noOfClicks", 0);
         canClick = true;
