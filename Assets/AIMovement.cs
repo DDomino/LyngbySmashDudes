@@ -11,7 +11,7 @@ public class AIMovement : MonoBehaviour
     bool jump = false;
     public float runSpeed = 40f;
     public Animator animator;
-    public GameObject DetectionRing;
+ 
 
 
 

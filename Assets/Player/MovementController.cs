@@ -76,7 +76,7 @@ void Update()
         {
          
             animator.SetInteger("noOfClicks", noOfClicks);
-            
+            canClick = false;
 
         }
     
@@ -98,28 +98,10 @@ void Update()
 
     public void ComboCheck()
     {
-        canClick = false;
-     
-
-
+        
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("PowerUp"))
-        {
-
-            animator.SetTrigger("isPowerUp");
-           
-
-            // animator.SetBool("isPowerUp", false);
-
-
-        }
-    }
-
-
-    
+  
+      
  
 
 
@@ -136,8 +118,8 @@ void Update()
     }
 
 
-   
 
+    
 
 
     /*
@@ -152,7 +134,7 @@ void Update()
         }
     }
     */
-   
+
 
 
 

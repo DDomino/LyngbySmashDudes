@@ -9,17 +9,7 @@ public class playerHP : MonoBehaviour
     public float hp = 30;
     public Rigidbody2D rb;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   
 
 
     public void takingDamge()
