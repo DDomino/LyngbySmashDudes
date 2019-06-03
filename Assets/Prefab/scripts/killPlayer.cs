@@ -25,7 +25,7 @@ public class killPlayer : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player") )
             {
-                stage = 2;
+           
                 SceneManager.LoadScene("youLost");
                 
 

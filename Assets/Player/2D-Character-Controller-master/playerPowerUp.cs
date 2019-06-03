@@ -8,9 +8,7 @@ public class playerPowerUp : MonoBehaviour
 
     public GameObject player;
     public bool powerMode = false;
-    public int work = 1;
-    
-   
+  
     private bool facing;
 
 
@@ -18,26 +16,7 @@ public class playerPowerUp : MonoBehaviour
     public float fireballSpeed = 8f;
 
  
-
-
-
-    public AudioClip impact;
-    AudioSource audioSource;
-
-
-    void awake()
-
-    {
-    }
-
-        
-
-
-
-
-
-
-    public void plsWork()
+    public void ActivatePowerUp()
     {
         powerMode = true;
     }
@@ -49,34 +28,24 @@ public class playerPowerUp : MonoBehaviour
         if (Input.GetKey("e"))
         {
             
-            if (work == 2 || powerMode==true)
+            if (powerMode==true)
             {
-
-                
-
-                if (facing == true )
+             if (facing == true )
                 {
                    
                     var fireballInst = Instantiate(fireball, transform.position, Quaternion.Euler(new Vector2(1f, 0)));
                     fireballInst.velocity = new Vector2(fireballSpeed, 0);
-                    
-
-                    Debug.Log("Fire Fire Fire");
                     powerMode = false;
-                    work = 1;
+              
                     
 
                 }
                 else
                 {
-
                     var fireballInst = Instantiate(fireball, transform.position, Quaternion.Euler(new Vector3(0, 0,180)));
                     fireballInst.velocity = new Vector2(-fireballSpeed,0);
-                    
-                    Debug.Log("Fire Fire Fire");
                     powerMode = false;
-                    work = 1;
-                   
+                  
 
 
                 }

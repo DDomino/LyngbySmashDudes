@@ -21,7 +21,7 @@ public class Changeboo : MonoBehaviour
     {
         if (Input.GetKey("p"))
         {
-            player.GetComponent<playerPowerUp>().plsWork();
+            player.GetComponent<playerPowerUp>().ActivatePowerUp();
         }
 
         if (Input.GetKeyDown("i"))

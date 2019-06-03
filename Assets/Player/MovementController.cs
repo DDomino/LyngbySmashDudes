@@ -27,11 +27,6 @@ public class MovementController : MonoBehaviour
 
 
 
-    public void SpeedBoost(float amount)
-    {
-        runSpeed += amount;
-    }
-
 void Update()
     {
 
@@ -43,7 +38,6 @@ void Update()
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
-         //   animator.SetBool("isJumping", true);
 
         }
 
@@ -96,19 +90,8 @@ void Update()
     }
 
 
-    public void ComboCheck()
-    {
-        
-    }
-  
-      
  
 
-
-    public void onLanding()
-    {
-        animator.SetBool("isJumping", false);
-    }
 
     private void FixedUpdate()
     {
@@ -121,19 +104,6 @@ void Update()
 
     
 
-
-    /*
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Monster"))
-        {
-           // ScreenController2.GetComponent<SceneController>().GameOver();
-            
-        
-
-        }
-    }
-    */
 
 
 
