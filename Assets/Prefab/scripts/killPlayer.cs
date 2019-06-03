@@ -8,14 +8,26 @@ public class killPlayer : MonoBehaviour
 
     public float monsterOutCount = 0;
     public float stage = 0;
+    
+
+
+
+    private void Update()
+    {
+        
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
      
+    
         {
             if (other.gameObject.CompareTag("Player") )
             {
+                stage = 2;
                 SceneManager.LoadScene("youLost");
+                
 
             }
 

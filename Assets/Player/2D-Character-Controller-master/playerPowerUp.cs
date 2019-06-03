@@ -56,7 +56,7 @@ public class playerPowerUp : MonoBehaviour
 
                 if (facing == true )
                 {
-                    audioSource.PlayOneShot(impact, 0.7f);
+                   
                     var fireballInst = Instantiate(fireball, transform.position, Quaternion.Euler(new Vector2(1f, 0)));
                     fireballInst.velocity = new Vector2(fireballSpeed, 0);
                     

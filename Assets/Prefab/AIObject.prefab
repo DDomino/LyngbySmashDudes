@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8943347819620934363}
   - component: {fileID: 8943347819620934361}
-  - component: {fileID: 8943347819620934360}
+  - component: {fileID: 8464840177715956098}
   m_Layer: 9
   m_Name: Fist
   m_TagString: Untagged
@@ -177,7 +177,7 @@ CircleCollider2D:
   m_Offset: {x: 0.12, y: -0.05}
   serializedVersion: 2
   m_Radius: 0.06
---- !u!114 &8943347819620934360
+--- !u!114 &8464840177715956098
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,10 +186,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8943347819620934362}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff9537e210545d042b1455322d6820d4, type: 3}
+  m_Script: {fileID: 11500000, guid: b2f14649fc947314e8e461aeb474e21f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  playerWasHit: 0
 --- !u!1 &8943347819927801058
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,9 +407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2074b470a807ea042abc955b6c957dd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 8943347819927801058}
   hp: 50
-  rb: {fileID: 8943347819927801082}
+  Attacker: {fileID: 8943347819927801082}
 --- !u!1 &8943347819953827978
 GameObject:
   m_ObjectHideFlags: 0

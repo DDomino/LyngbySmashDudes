@@ -23,6 +23,7 @@ public class playerHP : MonoBehaviour
 
         if(b == true)
         {
+            
             hp += 5;
             rb.AddForce(transform.up * hp);
             rb.AddForce(transform.right * hp);

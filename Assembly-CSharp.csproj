@@ -60,23 +60,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\AIAttack.cs" />
-    <Compile Include="Assets\AiDetection.cs" />
-    <Compile Include="Assets\AIMovement.cs" />
-    <Compile Include="Assets\AttackScript.cs" />
-    <Compile Include="Assets\Monster.cs" />
     <Compile Include="Assets\Ny mappe\scripts\PlatformHoverScript.cs" />
     <Compile Include="Assets\Ny mappe\scripts\Selector_script.cs" />
     <Compile Include="Assets\Player\2D-Character-Controller-master\CharacterController2D.cs" />
     <Compile Include="Assets\Player\2D-Character-Controller-master\playerPowerUp.cs" />
     <Compile Include="Assets\Player\2D-Character-Controller-master\powerUp.cs" />
     <Compile Include="Assets\Player\MovementController.cs" />
+    <Compile Include="Assets\Prefab\scripts\AIAttack.cs" />
+    <Compile Include="Assets\Prefab\scripts\AiDetection.cs" />
+    <Compile Include="Assets\Prefab\scripts\AIMovement.cs" />
+    <Compile Include="Assets\Prefab\scripts\AttackScript.cs" />
     <Compile Include="Assets\Prefab\scripts\breakStuff.cs" />
     <Compile Include="Assets\Prefab\scripts\bullet.cs" />
     <Compile Include="Assets\Prefab\scripts\Changeboo.cs" />
     <Compile Include="Assets\Prefab\scripts\GetMainChar.cs" />
     <Compile Include="Assets\Prefab\scripts\hpUi.cs" />
     <Compile Include="Assets\Prefab\scripts\killPlayer.cs" />
+    <Compile Include="Assets\Prefab\scripts\Monster.cs" />
     <Compile Include="Assets\Prefab\scripts\playerHP.cs" />
     <Compile Include="Assets\Prefab\scripts\restart.cs" />
     <Compile Include="Assets\Prefab\scripts\scanePutter.cs" />
