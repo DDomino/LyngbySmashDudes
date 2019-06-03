@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3941741509021698370}
   - component: {fileID: 2733081829641727154}
   - component: {fileID: 7607187832382408279}
+  - component: {fileID: 2106717168861335429}
   m_Layer: 0
   m_Name: Goku Sprites_3
   m_TagString: Projectile
@@ -118,3 +119,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.19092347
+--- !u!114 &2106717168861335429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4587261293008606436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ee253b4917276742b27a8bd2c9704bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  speed: 4

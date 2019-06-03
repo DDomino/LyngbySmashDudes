@@ -9,6 +9,8 @@ TagManager:
   - Monster
   - Projectile
   - ArenaEdge
+  - vase
+  - npc
   layers:
   - Default
   - TransparentFX

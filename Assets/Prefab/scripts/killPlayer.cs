@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 public class killPlayer : MonoBehaviour
 {
 
-  
+    public float monsterOutCount = 0;
+    public float stage = 0;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -14,22 +15,25 @@ public class killPlayer : MonoBehaviour
         {
             if (other.gameObject.CompareTag("Player") )
             {
-
-
-
                 SceneManager.LoadScene("youLost");
 
-
-
             }
 
-            if (other.gameObject.CompareTag("Projectile")){
-                Destroy(other.gameObject); // this destroys the bullet
-
-            }
-            if (other.gameObject.CompareTag("Monster"))
+           
+            if (other.gameObject.CompareTag("Monster")&& stage ==1)
             {
-                SceneManager.LoadScene("YouWon");
+                SceneManager.LoadScene("stage 3");
+               
+            }
+            if (other.gameObject.CompareTag("Monster") )
+            {
+                monsterOutCount++;
+            }
+
+
+            if (other.gameObject.CompareTag("Monster") && monsterOutCount == 2)
+            {
+                SceneManager.LoadScene("YouWOn");
             }
         }
     }

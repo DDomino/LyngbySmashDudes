@@ -82,9 +82,8 @@ public class Monster : MonoBehaviour
 
 
 
-    void AttackAI()
-    {
-        
+    public void AttackAI()
+    {  
 
         if(Vector2.Distance(player.transform.position, transform.position) < AttackDistance && canClick == true)
 
@@ -95,6 +94,7 @@ public class Monster : MonoBehaviour
             {
                 StartCoroutine("comboWait");
                 Debug.Log("Enter Attack step 1");
+                
 
             }
             if (noOfClicks == 1)
@@ -102,6 +102,7 @@ public class Monster : MonoBehaviour
                 Debug.Log("Enter Attack step 2");
                 animator.SetInteger("noOfClicks", noOfClicks);
                 StartCoroutine("comboWait");
+                player.GetComponent<playerHP>().takingDamge();
 
             }
             
@@ -110,15 +111,30 @@ public class Monster : MonoBehaviour
                 Debug.Log("Enter Attack step 3");
                 StartCoroutine("comboWait");
                 animator.SetInteger("noOfClicks", noOfClicks);
-               
+                player.GetComponent<playerHP>().takingDamge();
+
             }
             if (noOfClicks >= 3)
             {
                 Debug.Log("Enter Attack step 4");
+                player.GetComponent<playerHP>().forceHit(player.GetComponent<CharacterController2D>().m_FacingRight);
+                Debug.Log("hey 1");
                 noOfClicks = 0;
+                Debug.Log("hey 2");
                 canClick = false;
-                animator.SetInteger("noOfClicks", noOfClicks);
+                Debug.Log("hey 3");
                 Moving = true;
+                Debug.Log("hey 4");
+                animator.SetInteger("noOfClicks", noOfClicks);
+                Debug.Log("hey 5");
+
+                InvokeRepeating("LookForPlayer", 1, 0.5f);
+                Debug.Log("hey 6");
+                InvokeRepeating("AttackAI", 1, 0.01f);
+                Debug.Log("hey 7");
+
+
+
             }
 
         }

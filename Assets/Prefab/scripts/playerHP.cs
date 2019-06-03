@@ -17,6 +17,7 @@ public class playerHP : MonoBehaviour
         hp+=10;
     }
 
+
     public void forceHit(bool b)
     {
 
