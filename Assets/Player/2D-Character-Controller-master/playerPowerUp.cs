@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class playerPowerUp : MonoBehaviour
 {
 
@@ -10,14 +11,27 @@ public class playerPowerUp : MonoBehaviour
     public int work = 1;
     
    
-  
     private bool facing;
-
-
 
 
     public Rigidbody2D fireball;
     public float fireballSpeed = 8f;
+
+ 
+
+
+
+    public AudioClip impact;
+    AudioSource audioSource;
+
+
+    void awake()
+
+    {
+    }
+
+        
+
 
 
 
@@ -34,7 +48,7 @@ public class playerPowerUp : MonoBehaviour
          
         if (Input.GetKey("e"))
         {
-
+            
             if (work == 2 || powerMode==true)
             {
 
@@ -42,13 +56,15 @@ public class playerPowerUp : MonoBehaviour
 
                 if (facing == true )
                 {
-
+                    audioSource.PlayOneShot(impact, 0.7f);
                     var fireballInst = Instantiate(fireball, transform.position, Quaternion.Euler(new Vector2(1f, 0)));
                     fireballInst.velocity = new Vector2(fireballSpeed, 0);
+                    
+
                     Debug.Log("Fire Fire Fire");
                     powerMode = false;
                     work = 1;
-
+                    
 
                 }
                 else
@@ -56,9 +72,11 @@ public class playerPowerUp : MonoBehaviour
 
                     var fireballInst = Instantiate(fireball, transform.position, Quaternion.Euler(new Vector3(0, 0,180)));
                     fireballInst.velocity = new Vector2(-fireballSpeed,0);
+                    
                     Debug.Log("Fire Fire Fire");
                     powerMode = false;
                     work = 1;
+                   
 
 
                 }

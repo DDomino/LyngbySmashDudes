@@ -7,6 +7,7 @@ public class AttackScript : MonoBehaviour
 
     private GameObject Monster;
     public GameObject player;
+    
 
     int numberClicks;
 
@@ -34,8 +35,17 @@ public class AttackScript : MonoBehaviour
             {
                 Monster.GetComponent<playerHP>().forceHit(player.GetComponent<CharacterController2D>().m_FacingRight);
 
+              
+
             }
 
         }
-    }
+ 
+   }
+
+
+
+       
+       
+   
 }

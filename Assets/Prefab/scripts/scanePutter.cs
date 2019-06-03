@@ -11,12 +11,12 @@ public class scanePutter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        platform.GetComponent<killPlayer>().stage =1;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        platform.GetComponent<killPlayer>().stage = 1;
     }
 }

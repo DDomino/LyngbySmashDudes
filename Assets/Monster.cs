@@ -83,13 +83,16 @@ public class Monster : MonoBehaviour
 
 
     public void AttackAI()
-    {  
-
-        if(Vector2.Distance(player.transform.position, transform.position) < AttackDistance && canClick == true)
-
+    {
+    
+        if (Vector2.Distance(player.transform.position, transform.position) < AttackDistance && canClick == true)
+   
         {
-            Debug.Log("Enter Attack");
+
+            animator.SetFloat("MovementSpeed", MovementSpeed);
             MovementSpeed = 0;
+            Debug.Log("Enter Attack");
+           
             if (noOfClicks == 0)
             {
                 StartCoroutine("comboWait");
@@ -117,22 +120,14 @@ public class Monster : MonoBehaviour
             if (noOfClicks >= 3)
             {
                 Debug.Log("Enter Attack step 4");
-                player.GetComponent<playerHP>().forceHit(player.GetComponent<CharacterController2D>().m_FacingRight);
-                Debug.Log("hey 1");
+                player.GetComponent<playerHP>().forceHit( GetComponent<Monster>().movingRIght);
                 noOfClicks = 0;
-                Debug.Log("hey 2");
-                canClick = false;
-                Debug.Log("hey 3");
-                Moving = true;
-                Debug.Log("hey 4");
                 animator.SetInteger("noOfClicks", noOfClicks);
-                Debug.Log("hey 5");
-
-                InvokeRepeating("LookForPlayer", 1, 0.5f);
-                Debug.Log("hey 6");
-                InvokeRepeating("AttackAI", 1, 0.01f);
-                Debug.Log("hey 7");
-
+                canClick = false;
+                Moving = true;
+               
+                
+          
 
 
             }
@@ -144,7 +139,7 @@ public class Monster : MonoBehaviour
    IEnumerator comboWait()
     {
         
-        yield return new WaitForSecondsRealtime(0.5f);
+        yield return new WaitForSecondsRealtime(1f);
         if (Vector2.Distance(player.transform.position, transform.position) < AttackDistance && canClick == true)
         {
             noOfClicks++;
@@ -153,8 +148,10 @@ public class Monster : MonoBehaviour
         else
         {
             noOfClicks = 0;
+            animator.SetInteger("noOfClicks", noOfClicks);
             Moving = true;
             canClick = true;
+
         }
             
     }
@@ -170,8 +167,8 @@ public class Monster : MonoBehaviour
         RaycastHit2D findEnemyBack = Physics2D.Raycast(BackDetection.position, -direction, DetectionDistance, layerMask);
 
 
-        if (Vector2.Distance(player.transform.position, transform.position) < AttackDistance)
-        {
+      
+        
             MovementSpeed = 3;
             canClick = true;
             if (FindEnemyFront.collider == true)
@@ -201,16 +198,9 @@ public class Monster : MonoBehaviour
                 }
             }
 
-        }
+        
 
-        /*
-        if (Vector2.Distance(player.transform.position, transform.position) < AttackDistance)
-
-        {
-            Moving = false;
-            AttackAI();
-        }
-        */
+       
     }
 
 
@@ -248,6 +238,11 @@ public class Monster : MonoBehaviour
                 }
             }
 
+        }
+        if (Vector2.Distance(player.transform.position, transform.position) < AttackDistance)
+        {
+            Moving = false;
+            AttackAI();
         }
 
        
