@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class hpUi : MonoBehaviour
 {
 
-    [SerializeField] private Text uiText1;
-    [SerializeField] private Text uiText2;
+   // [SerializeField] private Text uiText1;
+    //[SerializeField] private Text uiText2;
+
+
+
+    public TextMeshProUGUI uiText1;
+    public TextMeshProUGUI uiText2;
 
     public GameObject player1;
     public GameObject player2;
@@ -20,7 +26,8 @@ public class hpUi : MonoBehaviour
     void Start()
     {
 
-
+        player1 = GameObject.FindGameObjectWithTag("Player");
+        player2 = GameObject.FindGameObjectWithTag("Monster");
     }
 
     // Update is called once per frame
@@ -33,7 +40,7 @@ public class hpUi : MonoBehaviour
     }
 
 
-    public void updateHP(float hp,Text ui,string number, GameObject player)
+    public void updateHP(float hp,TextMeshProUGUI ui,string number, GameObject player)
     {
         hp = player.GetComponent<playerHP>().hp;
         

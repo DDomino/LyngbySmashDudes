@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.Events;
+using TMPro;
 
 public class CharacterController2D : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class CharacterController2D : MonoBehaviour
 
 
     public bool wayTurning;
+    public TextMeshProUGUI PlayerIndicator;
 
     
 
@@ -34,6 +36,13 @@ public class CharacterController2D : MonoBehaviour
 
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
+
+
+    private void Start()
+    {
+        
+    }
+
 
     private void Update()
     {
@@ -147,10 +156,16 @@ public class CharacterController2D : MonoBehaviour
 	{
 		// Switch the way the player is labelled as facing.
 		m_FacingRight = !m_FacingRight;
-
 		// Multiply the player's x local scale by -1.
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+
+
+
+        Vector3 PIScale = PlayerIndicator.transform.localScale;
+        PIScale.x *= -1;
+        PlayerIndicator.transform.localScale = PIScale;
+        
 	}
 }

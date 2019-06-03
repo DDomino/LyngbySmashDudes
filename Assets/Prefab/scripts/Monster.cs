@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class Monster : MonoBehaviour
 {
     public Animator animator;
+    public TextMeshProUGUI PlayerIndicator;
 
     //Movement Variables
     Vector2 direction;
@@ -31,6 +34,10 @@ public class Monster : MonoBehaviour
     public int noOfClicks;
     bool canClick;
     public GameObject fist;
+
+
+
+
 
     // RaycastHit2D findEnemy = Physics2D.Raycast(GroundDetection.position, direction, distance);
 
@@ -188,14 +195,22 @@ public class Monster : MonoBehaviour
                     transform.eulerAngles = new Vector3(0, -180, 0);
                     direction = Vector2.left;
                     movingRIght = false;
-                }
+
+                    Vector3 PIScale = PlayerIndicator.transform.localScale;
+                    PIScale.x *= -1;
+                    PlayerIndicator.transform.localScale = PIScale;
+            }
                 else
                 {
 
                     transform.eulerAngles = new Vector3(0, 0, 0);
                     direction = Vector2.right;
                     movingRIght = true;
-                }
+
+                    Vector3 PIScale = PlayerIndicator.transform.localScale;
+                    PIScale.x *= -1;
+                    PlayerIndicator.transform.localScale = PIScale;
+            }
             }
 
         
@@ -228,6 +243,10 @@ public class Monster : MonoBehaviour
                     transform.eulerAngles = new Vector3(0, -180, 0);
                     direction = Vector2.left;
                     movingRIght = false;
+
+                    Vector3 PIScale = PlayerIndicator.transform.localScale;
+                    PIScale.x *= -1;
+                    PlayerIndicator.transform.localScale = PIScale;
                 }
                 else
                 {
@@ -235,6 +254,10 @@ public class Monster : MonoBehaviour
                     transform.eulerAngles = new Vector3(0, 0, 0);
                     direction = Vector2.right;
                     movingRIght = true;
+
+                    Vector3 PIScale = PlayerIndicator.transform.localScale;
+                    PIScale.x *= -1;
+                    PlayerIndicator.transform.localScale = PIScale;
                 }
             }
 

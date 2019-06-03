@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class killPlayer : MonoBehaviour
 {
 
-    public float monsterOutCount = 0;
+  
     public float stage = 0;
     
 
@@ -37,15 +37,14 @@ public class killPlayer : MonoBehaviour
                 SceneManager.LoadScene("stage 3");
                
             }
-            if (other.gameObject.CompareTag("Monster") )
-            {
-                monsterOutCount++;
-            }
+           
 
 
-            if (other.gameObject.CompareTag("Monster") && monsterOutCount == 2)
+            if (other.gameObject.CompareTag("Monster") && stage!=1)
             {
+                
                 SceneManager.LoadScene("YouWOn");
+                
             }
         }
     }
