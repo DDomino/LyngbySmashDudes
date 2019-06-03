@@ -17,6 +17,7 @@ public class bullet : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         Monster = GameObject.FindGameObjectWithTag("Monster");
+        Destroy(this.gameObject, 2f);
         
        // facing = player.GetComponent<CharacterController2D>().m_FacingRight;
 

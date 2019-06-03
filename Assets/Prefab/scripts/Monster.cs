@@ -27,7 +27,7 @@ public class Monster : MonoBehaviour
 
    
     //Attack Variables
-    private float AttackDistance = 0.2f;
+    private float AttackDistance = 0.3f;
     bool Attacking;
 
 
@@ -111,17 +111,20 @@ public class Monster : MonoBehaviour
             {
                 Debug.Log("Enter Attack step 2");
                 animator.SetInteger("noOfClicks", noOfClicks);
-                StartCoroutine("comboWait");
                 player.GetComponent<playerHP>().takingDamge();
+                StartCoroutine("comboWait");
+                
 
             }
             
             if (noOfClicks == 2)
             {
                 Debug.Log("Enter Attack step 3");
-                StartCoroutine("comboWait");
-                animator.SetInteger("noOfClicks", noOfClicks);
                 player.GetComponent<playerHP>().takingDamge();
+                StartCoroutine("comboWait");
+              
+                animator.SetInteger("noOfClicks", noOfClicks);
+            
 
             }
             if (noOfClicks >= 3)

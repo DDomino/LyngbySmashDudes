@@ -10,6 +10,7 @@ TextureImporter:
     21300010: Goku Sprites_5
     21300012: Goku Sprites_6
     21300014: Goku Sprites_7
+    21300016: Goku Sprites_8
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -251,13 +252,33 @@ TextureImporter:
         width: 46
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 6, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: ad5905780128b454eb94d2339825d392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Goku Sprites_8
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1669
+        width: 26
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 2, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74759a98888130d4d971989f502a24c0
       vertices: []
       indices: 
       edges: []

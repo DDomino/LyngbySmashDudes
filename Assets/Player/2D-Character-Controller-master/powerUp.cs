@@ -11,7 +11,7 @@ public class powerUp : MonoBehaviour
     bool isTrigger = false;
 
     private GameObject player1;
-    public playerPowerUp pPU;
+
 
     // Start is called before the first frame update
     void Start()
