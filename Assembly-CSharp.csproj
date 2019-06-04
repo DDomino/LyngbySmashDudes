@@ -79,6 +79,7 @@
     <Compile Include="Assets\Prefab\scripts\playerHP.cs" />
     <Compile Include="Assets\Prefab\scripts\restart.cs" />
     <Compile Include="Assets\Prefab\scripts\scanePutter.cs" />
+    <Compile Include="Assets\shutdown.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
